@@ -7,13 +7,13 @@
 */
 void f_add(stack_t **head, unsigned int counter)
 {
-	stack_t *h;
+	stack_t *hs;
 	int len = 0, aux;
 
-	h = *head;
-	while (h)
+	hs = *head;
+	while (hs)
 	{
-		h = h->next;
+		hs = hs->next;
 		len++;
 	}
 	if (len < 2)
@@ -24,9 +24,9 @@ void f_add(stack_t **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	h = *head;
-	aux = h->n + h->next->n;
-	h->next->n = aux;
-	*head = h->next;
-	free(h);
+	hs = *head;
+	aux = hs->n + hs->next->n;
+	hs->next->n = aux;
+	*head = hs->next;
+	free(hs);
 }
