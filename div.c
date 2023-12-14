@@ -10,7 +10,7 @@ void f_div(stack_t **head, unsigned int counter)
 	stack_t *hs;
 	int len = 0, aux;
 
-	h = *head;
+	hs = *head;
 	while (hs)
 	{
 		hs = hs->next;
